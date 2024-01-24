@@ -1,5 +1,4 @@
 import unittest
-import math
 
 
 class TestSimpleMath(unittest.TestCase):
