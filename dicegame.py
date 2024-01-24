@@ -5,37 +5,37 @@ class Die:
     
     def __init__(self, sides):
         self.sides = sides
-        self.__value = 0
+        self.value = 0
 
     def roll(self):
-        self.__value = random.randint(1,self.sides)
+        self.value = random.randint(1,self.sides)
 
     def get_value(self):
-        return self.__value
+        return self.value
 
 
 class Player:
 
     def __init__(self, name):
         self.name = name
-        self.__dice = list()
+        self.dice = list()
 
     def add_die(self, sides):
-        self.__dice.append(Die(sides))
+        self.dice.append(Die(sides))
 
     def roll_dice(self):
-        for die in self.__dice:
+        for die in self.dice:
             die.roll()
 
     def get_dice_value(self):
         dice_value = 0
-        for die in self.__dice:
+        for die in self.dice:
             dice_value += die.get_value()
 
         return dice_value
     
     def get_number_of_dice(self):
-        return len(self.__dice)
+        return len(self.dice)
 
 
 # The game itself #
