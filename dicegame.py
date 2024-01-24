@@ -1,15 +1,18 @@
 import random
 
+
 class Die:
     
     def __init__(self, sides):
         self.sides = sides
+        self.__value = 0
 
     def roll(self):
         self.__value = random.randint(1,self.sides)
 
     def get_value(self):
         return self.__value
+
 
 class Player:
 
@@ -25,17 +28,19 @@ class Player:
             die.roll()
 
     def get_dice_value(self):
-        sum = 0
+        dice_value = 0
         for die in self.__dice:
-            sum += die.get_value()
+            dice_value += die.get_value()
 
-        return sum
+        return dice_value
     
     def get_number_of_dice(self):
         return len(self.__dice)
 
-### The game itself ###
+
+# The game itself #
 if __name__ == "__main__":
+
     player = Player(input("Choose your name:"))
 
     for _ in range(int(input("Select the number of 6-sided dice to play with:"))):
