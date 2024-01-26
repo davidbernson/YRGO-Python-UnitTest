@@ -2,7 +2,7 @@ import unittest
 from parameterized import parameterized_class
 from fibonacci import Fibonacci
 
-
+# Decorate as parameterized_class, including test values and expected results for some values of the fibonacci function
 @parameterized_class(('n', 'expected'), [
         (0, 0),
         (1, 1),
