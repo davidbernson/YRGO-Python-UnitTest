@@ -40,7 +40,8 @@ class TestSession(unittest.TestCase):
         actual = self.session.compute_speed()
         self.assertAlmostEqual(10.28, actual, delta=0.1)
 
-class Testuser(unittest.TestCase):
+
+class TestUser(unittest.TestCase):
     
     def test_addSessionToUser_AssertUserHasOneSession(self):
         self.user = User()
