@@ -14,9 +14,9 @@ from fibonacci import Fibonacci
         (7, 13),
         (8, 21),
         (9, 34),
-        # (20, 6765),
-        # (30, 832040),
-        # (35, 9227465)
+        (20, 6765),
+        (30, 832040),
+        (35, 9227465)
     ])
 class TestFibonacci(unittest.TestCase):
 
