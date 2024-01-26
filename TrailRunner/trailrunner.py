@@ -2,7 +2,7 @@ from datetime import date, timedelta
 
 class Session:
 
-    def __init__(self, distance, duration, input_date="2024-01-24"):
+    def __init__(self, distance, duration, input_date=str(date.today())):
         self.distance = distance
         self.duration = timedelta(seconds=duration)
         self.date = date.fromisoformat(input_date)
@@ -16,7 +16,7 @@ class Session:
     def get_date(self):
         return self.date
     
-    def compute_pace(self):
+    def compute_pace(self) -> timedelta:
         return self.duration / self.distance
     
     def compute_speed(self):
@@ -36,3 +36,9 @@ class User:
     def compute_avg_distance(self):
         sum_distance = sum(session.get_distance() for session in self.sessions)
         return sum_distance / len(self.sessions)
+    
+    def compute_avg_pace(self) -> timedelta:
+        sum_pace = timedelta(seconds=0)
+        for session in self.sessions:
+            sum_pace += session.compute_pace()
+        return sum_pace / len(self.sessions)
