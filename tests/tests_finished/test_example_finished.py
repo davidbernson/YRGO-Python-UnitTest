@@ -1,8 +1,8 @@
 import unittest
 
 class TestExample(unittest.TestCase):
-    
-    def test_verySimpleTest(self):
+
+    def test_very_simple_test(self):
         # Setup
         a = 3
         b = 3
@@ -10,14 +10,14 @@ class TestExample(unittest.TestCase):
         # Assertion
         self.assertEqual(a, b)
 
-    def test_anotherVerySimpleTest(self):
+    def test_another_very_simple_test(self):
         # Setup
         a = 3
         b = 3
 
         # Assertion
         self.assertTrue(a, b)
-    
+
     def test_max(self):
         # Setup
         a = 5
@@ -41,4 +41,3 @@ class TestExample(unittest.TestCase):
 
         # Assertion
         self.assertEqual(expected, actual)
-
