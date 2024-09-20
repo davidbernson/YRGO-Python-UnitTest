@@ -10,23 +10,23 @@ class TestDiceGame(unittest.TestCase):
     def test_create_player(self):
         self.assertEqual("Tester McTesterson", self.player.name)
 
-    def test_addThreeDiceToPlayer(self):      
+    def test_add_three_dice_to_player(self):
         self.player.add_die(6)
         self.player.add_die(6)
         self.player.add_die(6)
 
         self.assertEqual(3, self.player.get_number_of_dice())
 
-    def test_rollSingleSixSidedDie25Times(self):
-        self.die = dicegame.Die(6)
-        
+    def test_roll_single_six_sided_die_25_times(self):
+        die = dicegame.Die(6)
+
         for i in range(25):
-            self.die.roll()
+            die.roll()
 
             with self.subTest(i=i):
-                self.assertTrue(1 <= self.die.get_value() <= 6)
+                self.assertTrue(1 <= die.get_value() <= 6)
 
-    def test_rollThreeDiceForPlayer(self):
+    def test_roll_three_dice_for_player(self):
         self.player.add_die(6)
         self.player.add_die(6)
         self.player.add_die(6)
