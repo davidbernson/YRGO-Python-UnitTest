@@ -19,6 +19,9 @@ from fibonacci import Fibonacci
         (35, 9227465)
     ])
 class TestFibonacci(unittest.TestCase):
+    # Add class variables for the @parameterized_class to prevent linting issues
+    n = None
+    expected = None
 
     def setUp(self):
         self.fibo = Fibonacci()
