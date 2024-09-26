@@ -2,7 +2,7 @@ import unittest
 
 
 class TestSimpleMath(unittest.TestCase):
-    
+
     def setUp(self):
         self.a = 10
         self.b = 3

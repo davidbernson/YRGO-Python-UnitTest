@@ -1,3 +1,4 @@
+"""Unit tests for the account class"""
 import unittest
 from account import Account
 
